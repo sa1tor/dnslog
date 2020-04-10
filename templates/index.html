@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DNSLOG">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>DNSLOG</title>
+
+    <link href="{{ static_url('bootstrap.min.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-9 col-md-offset-2">
+          <h1 class="page-header">DNSLOG</h1>
+
+			<p>
+				<button id="btn-get" type="button" class="btn btn-primary" onclick="getsubdomain()">GetSubDomain</button>
+				<button id="btn-refresh" type="button" class="btn btn-success" onclick="location.reload();">REFRESH</button>
+				<button id="btn-deleteall" type="button" class="btn btn-danger" onclick="deleteall()">DELETE ALL</button>
+			</p>
+			<p id="subdomain"></p>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>DNS Query Record</th>
+                  <th>IP Address</th>
+                  <th>Created time</th>
+                </tr>
+              </thead>
+              <tbody>
+			  {% if result %}
+			     {% for id,url,ip,_time in result %}
+                <tr>
+                  <td>{{ id }}</td>
+                  <td>{{ url }}</td>
+                  <td>{{ ip }}</td>
+                  <td>{{ _time }}</td>
+                </tr>
+				  {% end for %}
+			  {% end if %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ static_url('jquery.min.js') }}"></script>
+    <script src="{{ static_url('bootstrap.min.js') }}"></script>
+	<script>
+		function deleteall(){
+			data = {"delete":"true"}
+			$.post('#',data);
+			location.reload();
+		}
+		function getsubdomain(){
+			data = {"get":"true"}
+			$.post('#',data,function(result){
+				if(result != '0'){
+					$("#subdomain").text(result+'.log.saltor.icu');
+				}
+			});
+			
+		}
+	</script>
+</body>
+</html>
