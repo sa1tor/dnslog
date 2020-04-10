@@ -27,4 +27,4 @@ python server.py --port=6002
 
 当然也可以使用Nginx+Tornado+Supervisor来部署
 
-
+博客相关文章：[http://www.saltor.cn/archives/62](http://www.saltor.cn/archives/62)
