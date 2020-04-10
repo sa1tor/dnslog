@@ -8,10 +8,12 @@
 云服务器ip: 100.100.100.100
 
 在云dns解析处添加一条A记录和一条NS记录
+
 ![image](https://www.baidu.com/img/bd_logo1.png)
 
 云服务器ECS添加安全规则，放行53端口
-![](1.png)
+
+![image](https://raw.githubusercontent.com/sa1tor/dnslog/master/1.png)
 
 ## 安装
 ```
