@@ -9,11 +9,11 @@
 
 在云dns解析处添加一条A记录和一条NS记录
 
-![image](https://www.baidu.com/img/bd_logo1.png)
+![](https://github.com/sa1tor/dnslog/blob/master/1.webp)
 
 云服务器ECS添加安全规则，放行53端口
 
-![image](https://github.com/sa1tor/dnslog/blob/master/1.png)
+![](https://github.com/sa1tor/dnslog/blob/master/2.webp)
 
 ## 安装
 ```
