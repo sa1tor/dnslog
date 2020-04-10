@@ -13,7 +13,7 @@
 
 云服务器ECS添加安全规则，放行53端口
 
-![image](https://raw.githubusercontent.com/sa1tor/dnslog/master/1.png)
+![image](https://github.com/sa1tor/dnslog/blob/master/1.png)
 
 ## 安装
 ```
