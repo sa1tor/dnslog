@@ -7,7 +7,7 @@
 域名: saltor.icu
 云服务器ip: 100.100.100.100
 
-在云dns解析处添加一条A记录和一条NS记录
+在云解析DNS处添加一条A记录和一条NS记录
 
 ![](https://github.com/sa1tor/dnslog/blob/master/1.webp)
 
